@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="4404" started-at="2015-12-08T09:54:44Z" finished-at="2015-12-08T09:54:49Z">
+  <suite name="Tests" duration-ms="8992" started-at="2015-12-14T13:25:46Z" finished-at="2015-12-14T13:25:55Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="4404" started-at="2015-12-08T09:54:44Z" finished-at="2015-12-08T09:54:49Z">
-      <class name="ru.st.selenium.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:ru.st.selenium.LoginTest@c087be]" name="init" is-config="true" duration-ms="2923" started-at="2015-12-08T12:54:44Z" finished-at="2015-12-08T12:54:47Z">
+    <test name="Test1" duration-ms="8992" started-at="2015-12-14T13:25:46Z" finished-at="2015-12-14T13:25:55Z">
+      <class name="ru.st.selenium.AddNewUser">
+        <test-method status="PASS" signature="init()[pri:0, instance:ru.st.selenium.AddNewUser@1a8f100]" name="init" is-config="true" duration-ms="3769" started-at="2015-12-14T16:25:46Z" finished-at="2015-12-14T16:25:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:ru.st.selenium.LoginTest@c087be]" name="testUntitled" duration-ms="1474" started-at="2015-12-08T12:54:47Z" finished-at="2015-12-08T12:54:49Z">
+        <test-method status="PASS" signature="addNewUserOK()[pri:0, instance:ru.st.selenium.AddNewUser@1a8f100]" name="addNewUserOK" duration-ms="5216" started-at="2015-12-14T16:25:49Z" finished-at="2015-12-14T16:25:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:ru.st.selenium.LoginTest@c087be]" name="tearDown" is-config="true" duration-ms="1815" started-at="2015-12-08T12:54:49Z" finished-at="2015-12-08T12:54:50Z">
+        </test-method> <!-- addNewUserOK -->
+        <test-method status="PASS" signature="stop()[pri:0, instance:ru.st.selenium.AddNewUser@1a8f100]" name="stop" is-config="true" duration-ms="485" started-at="2015-12-14T16:25:55Z" finished-at="2015-12-14T16:25:55Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- ru.st.selenium.LoginTest -->
+        </test-method> <!-- stop -->
+      </class> <!-- ru.st.selenium.AddNewUser -->
     </test> <!-- Test1 -->
   </suite> <!-- Tests -->
 </testng-results>
