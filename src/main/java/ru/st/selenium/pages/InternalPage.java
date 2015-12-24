@@ -18,6 +18,9 @@ public class InternalPage extends AnyPage {
     return this;
   }
   
+  @FindBy(linkText = "Home")
+  private WebElement homeLink;
+  
   @FindBy(css = "nav a[href $= '?go=profile']")
   private WebElement userProfileLink;
 
@@ -26,6 +29,11 @@ public class InternalPage extends AnyPage {
 
   @FindBy(css = "nav a[href $= '?logout']")
   private WebElement logoutLink;
+  
+  public HomePage clickHomeLink() {
+	    homeLink.click();
+	    return pages.homePage;
+	  }
   
   public UserProfilePage clickUserProfilePage() {
     userProfileLink.click();

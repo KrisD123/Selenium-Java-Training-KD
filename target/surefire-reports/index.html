@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Tests">
-              <span class="suite-name border-passed">Tests</span>
+              <span class="suite-name border-failed">Tests</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Tests" class="hide-methods failed suite-Tests"> (hide)</a> <!-- hide-methods failed suite-Tests -->
+                      <a href="#" panel-name="suite-Tests" class="show-methods failed suite-Tests"> (show)</a> <!-- show-methods failed suite-Tests -->
+                    </span>
+                    <div class="method-list-content failed suite-Tests">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="ru.st.selenium.AddDeleteFilmTest" hash-for-method="testDeleteFilm">testDeleteFilm</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Tests -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +115,12 @@
                     <div class="method-list-content passed suite-Tests">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="ru.st.selenium.AddNewUser" hash-for-method="addNewUserOK">addNewUserOK</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="ru.st.selenium.AddDeleteFilmTest" hash-for-method="testAddNewFilmFailed">testAddNewFilmFailed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests" title="ru.st.selenium.AddDeleteFilmTest" hash-for-method="testAddNewFilmOK">testAddNewFilmOK</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Tests -->
@@ -116,17 +135,71 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Tests" class="panel Tests">
-          <div class="suite-Tests-class-passed">
+          <div class="suite-Tests-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">ru.st.selenium.AddNewUser</span>
+              <img src="failed.png"/>
+              <span class="class-name">ru.st.selenium.AddDeleteFilmTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addNewUserOK">
-                  </a> <!-- addNewUserOK -->
-                  <span class="method-name">addNewUserOK</span>
+                  <a name="testDeleteFilm">
+                  </a> <!-- testDeleteFilm -->
+                  <span class="method-name">testDeleteFilm</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div[alt=\&quot;TestMovie1450697037896\&quot;]&quot;}
+Command duration or timeout: 9 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.46.0&apos;, revision: &apos;61506a4624b13675f24581e453592342b7485d71&apos;, time: &apos;2015-06-04 10:22:50&apos;
+System info: host: &apos;spbws-l-010&apos;, ip: &apos;10.233.57.127&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+*** Element info: {Using=css selector, value=div[alt=&quot;TestMovie1450697037896&quot;]}
+Session ID: 7e6096c6-fec3-4b6e-bfa0-ee234cd64782
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=42.0}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:447)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:426)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at ru.st.selenium.pages.HomePage.filmLink(HomePage.java:42)
+	at ru.st.selenium.pages.HomePage.goToFilmDetailsPage(HomePage.java:89)
+	at ru.st.selenium.applogic2.FilmHelper2.deleteFilm(FilmHelper2.java:47)
+	at ru.st.selenium.AddDeleteFilmTest.testDeleteFilm(AddDeleteFilmTest.java:57)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;div[alt=\&quot;TestMovie1450697037896\&quot;]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.46.0&apos;, revision: &apos;61506a4624b13675f24581e453592342b7485d71&apos;, time: &apos;2015-06-04 10:22:50&apos;
+System info: host: &apos;spbws-l-010&apos;, ip: &apos;10.233.57.127&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/kdodonov/AppData/Local/Temp/anonymous8645480166932876423webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10299)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/kdodonov/AppData/Local/Temp/anonymous8645480166932876423webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10308)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/kdodonov/AppData/Local/Temp/anonymous8645480166932876423webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12282)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/kdodonov/AppData/Local/Temp/anonymous8645480166932876423webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12287)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/kdodonov/AppData/Local/Temp/anonymous8645480166932876423webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12229)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests-class-failed -->
+          <div class="suite-Tests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ru.st.selenium.AddDeleteFilmTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddNewFilmFailed">
+                  </a> <!-- testAddNewFilmFailed -->
+                  <span class="method-name">testAddNewFilmFailed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddNewFilmOK">
+                  </a> <!-- testAddNewFilmOK -->
+                  <span class="method-name">testAddNewFilmOK</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -144,7 +217,7 @@
   &lt;test name=&quot;Test1&quot;&gt;
     &lt;parameter name=&quot;path&quot; value=&quot;/&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;ru.st.selenium.AddNewUser&quot;/&gt;
+      &lt;class name=&quot;ru.st.selenium.AddDeleteFilmTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
 &lt;/suite&gt; &lt;!-- Tests --&gt;
@@ -184,16 +257,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addNewUserOK')
-data.setCell(0, 2, 'ru.st.selenium.AddNewUser')
-data.setCell(0, 3, 5216);
+data.setCell(0, 1, 'testAddNewFilmFailed')
+data.setCell(0, 2, 'ru.st.selenium.AddDeleteFilmTest')
+data.setCell(0, 3, 12876);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testAddNewFilmOK')
+data.setCell(1, 2, 'ru.st.selenium.AddDeleteFilmTest')
+data.setCell(1, 3, 12817);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testDeleteFilm')
+data.setCell(2, 2, 'ru.st.selenium.AddDeleteFilmTest')
+data.setCell(2, 3, 2044);
 window.suiteTableData['Tests']= { tableData: data, tableDiv: 'times-div-Tests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Tests">
               </div> <!-- times-div-Tests -->
             </div> <!-- times-div -->
@@ -219,18 +300,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">ru.st.selenium.AddNewUser</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">ru.st.selenium.AddDeleteFilmTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">performLogin</span>
+                <span class="method-start">3759 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">addNewUserOK</span>
-                <span class="method-start">3772 ms</span>
+                <span class="method-name">testAddNewFilmFailed</span>
+                <span class="method-start">5435 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddNewFilmOK</span>
+                <span class="method-start">18311 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testDeleteFilm</span>
+                <span class="method-start">31129 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">stop</span>
-                <span class="method-start">9007 ms</span>
+                <span class="method-start">33235 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

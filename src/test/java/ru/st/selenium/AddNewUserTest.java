@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import ru.st.selenium.model.User;
 import ru.st.selenium.pages.TestBase;
 
-public class AddNewUser extends TestBase {
+public class AddNewUserTest extends TestBase {
 
 	@Test
 	public void addNewUserOK() {
